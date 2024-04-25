@@ -10,6 +10,11 @@ import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
+import AllTouristsSpot from './pages/AllTouristsSpot/AllTouristsSpot';
+import AddTouristsSpot from './pages/AddTouristsSpot/AddTouristsSpot';
+import MyList from './pages/MyList/MyList';
+import AuthProvider from './providers/AuthProvider/AuthProvider';
+import PrivateRoute from './routes/PrivateRoute/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +22,22 @@ const router = createBrowserRouter([
     element: <Root />,
     errorElement: <ErrorPage />,
     children: [
+      {
+        path: "/",
+        element: <Home />
+      },
+      {
+        path: "/all-tourists-spot",
+        element: <PrivateRoute><AllTouristsSpot /></PrivateRoute>
+      },
+      {
+        path: "/add-tourists-spot",
+        element: <AddTouristsSpot />
+      },
+      {
+        path: "/my-list",
+        element: <MyList />
+      },
       {
         path: "/",
         element: <Home />
@@ -36,6 +57,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>,
 )
