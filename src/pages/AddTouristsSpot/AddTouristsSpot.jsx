@@ -36,7 +36,7 @@ const AddTouristSpot = () => {
   }
 
   return (
-    <div className="card shrink-0 w-full max-w-4xl border mx-auto shadow-2xl bg-base-100">
+    <div className="card shrink-0 w-full max-w-4xl border mx-auto shadow-2xl bg-base-100 mb-10">
       <form className="card-body" onSubmit={handleSubmit(onSubmit)}>
         <h1 className="text-3xl font-bold text-center">Add Tourist Spot</h1>
         <div className="form-control">
