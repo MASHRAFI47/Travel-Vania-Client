@@ -4,7 +4,7 @@ import { useContext } from "react"
 import { AuthContext } from "../../providers/AuthProvider/AuthProvider"
 
 const Header = () => {
-    const {user, logOut} = useContext(AuthContext)
+    const { user, logOut } = useContext(AuthContext)
     const links = <>
         <li><NavLink className={'font-semibold'} to={'/'}>Home</NavLink></li>
         <li><NavLink className={'font-semibold'} to={'/all-tourists-spot'}>All Tourists Spot</NavLink></li>
@@ -39,19 +39,24 @@ const Header = () => {
                 <div className="dropdown dropdown-end">
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">
-                            <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                            <img alt="Tailwind CSS Navbar component" src={user ? user.photoURL : "https://extendedevolutionarysynthesis.com/wp-content/uploads/2018/02/avatar-1577909_960_720.png"} />
                         </div>
                     </div>
-                    <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
-                        <li>
-                            <a className="justify-between">
-                                Profile
-                                <span className="badge">New</span>
-                            </a>
-                        </li>
-                        <li><a>Settings</a></li>
-                        <li><a onClick={logOut}>Logout</a></li>
-                    </ul>
+                    {
+                        user ?
+                            <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+                                <li>
+                                    <a className="justify-between">
+                                        Profile
+                                        <span className="badge">New</span>
+                                    </a>
+                                </li>
+                                <li><a>Settings</a></li>
+                                <li><a onClick={logOut}>Logout</a></li>
+                            </ul>
+                            :
+                            ""
+                    }
                 </div>
             </div>
         </div>
