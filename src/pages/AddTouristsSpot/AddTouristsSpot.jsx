@@ -12,10 +12,10 @@ const AddTouristSpot = () => {
   } = useForm()
 
   const onSubmit = (data) => {
-    const { imageURL, tourists_spot_name, country_Name, location, average_cost, seasonality, travel_time, totaVisitorsPerYear, userEmail, userName } = data;
+    const { imageURL, tourists_spot_name, country_Name, location, short_description, average_cost, seasonality, travel_time, totalVisitorsPerYear, user_email, user_name } = data;
+
     const email = user.email
-    const newSpot = { email, imageURL, tourists_spot_name, country_Name, location, average_cost, seasonality, travel_time, totaVisitorsPerYear, userEmail, userName }
-    console.log(data)
+    const newSpot = { email, imageURL, tourists_spot_name, country_Name, short_description, location, average_cost, seasonality, travel_time, totalVisitorsPerYear, user_email, user_name }
 
     fetch('http://localhost:4000/tourists', {
       method: "POST",
@@ -57,9 +57,17 @@ const AddTouristSpot = () => {
           </div>
           <div className="form-control">
             <label className="label font-semibold">
-              <span className="label-text">Country Name</span>
+              <span className="label-text">Select country</span>
             </label>
-            <input type="text" placeholder="France" className="input input-bordered" {...register("country_Name", { required: true })} />
+            <select className="select select-bordered w-full" {...register("country_Name", { required: true })}>
+              <option disabled selected>Select Country</option>
+              <option>France</option>
+              <option>Italy</option>
+              <option>Spain</option>
+              <option>England</option>
+              <option>Netherlands</option>
+              <option>Switzerland</option>
+            </select>
             {errors.country_Name && <span className="text-red-600">This field is required</span>}
           </div>
 
@@ -76,8 +84,8 @@ const AddTouristSpot = () => {
           <label className="label font-semibold">
             <span className="label-text">Short Description</span>
           </label>
-          <textarea className="textarea textarea-bordered" placeholder="Bio" {...register("shortDescription", { required: true })}></textarea>
-          {errors.shortDescription && <span className="text-red-600">This field is required</span>}
+          <textarea className="textarea textarea-bordered" placeholder="Bio" {...register("short_description", { required: true })}></textarea>
+          {errors.short_description && <span className="text-red-600">This field is required</span>}
         </div>
 
         <div className="grid grid-cols-3 gap-5">
@@ -85,7 +93,7 @@ const AddTouristSpot = () => {
             <label className="label font-semibold">
               <span className="label-text">Average Cost</span>
             </label>
-            <input type="text" placeholder="$400" className="input input-bordered" {...register("average_cost", { required: true })} />
+            <input type="number" placeholder="$400" className="input input-bordered" {...register("average_cost", { required: true })} />
             {errors.average_cost && <span className="text-red-600">This field is required</span>}
           </div>
           <div className="form-control">
@@ -107,27 +115,24 @@ const AddTouristSpot = () => {
           <label className="label font-semibold">
             <span className="label-text">Total Visitors Per Year</span>
           </label>
-          <input type="text" placeholder="10000" className="input input-bordered" {...register("totaVisitorsPerYear", { required: true })} />
-          {errors.totaVisitorsPerYear && <span className="text-red-600">This field is required</span>}
+          <input type="text" placeholder="10000" className="input input-bordered" {...register("totalVisitorsPerYear", { required: true })} />
+          {errors.totalVisitorsPerYear && <span className="text-red-600">This field is required</span>}
         </div>
+
         <div className="grid grid-cols-2 gap-5">
-          <div>
-            <div className="form-control">
-              <label className="label font-semibold">
-                <span className="label-text">User Email</span>
-              </label>
-              <input type="email" placeholder="dalph@gmail.com" className="input input-bordered" {...register("userEmail", { required: true })} />
-              {errors.userEmail && <span className="text-red-600">This field is required</span>}
-            </div>
+          <div className="form-control">
+            <label className="label font-semibold">
+              <span className="label-text">User email</span>
+            </label>
+            <input type="text" placeholder="Ralph Lauren" className="input input-bordered" defaultValue={user ? user.email : ""} readOnly {...register("user_email", { required: true })} />
+            {errors.user_email && <span className="text-red-600">This field is required</span>}
           </div>
-          <div>
-            <div className="form-control">
-              <label className="label font-semibold">
-                <span className="label-text">User Name</span>
-              </label>
-              <input type="text" placeholder="Dalph Rolan" className="input input-bordered" {...register("userName", { required: true })} />
-              {errors.userName && <span className="text-red-600">This field is required</span>}
-            </div>
+          <div className="form-control">
+            <label className="label font-semibold">
+              <span className="label-text">User email</span>
+            </label>
+            <input type="text" placeholder="ralph@gmail.com" className="input input-bordered" defaultValue={user ? user.displayName : ""} {...register("user_name", { required: true })} readOnly />
+            {errors.user_name && <span className="text-red-600">This field is required</span>}
           </div>
         </div>
         <div className="form-control mt-6">
