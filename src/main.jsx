@@ -26,7 +26,8 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home />
+        element: <Home />,
+        loader: () => fetch('http://localhost:4000/tourists')
       },
       {
         path: "/all-tourists-spot",

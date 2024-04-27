@@ -20,10 +20,10 @@ const AllTouristsSpot = () => {
     <div className="container mx-auto">
       <div className="flex justify-end mt-3">
         <details className="dropdown">
-          <summary className="m-1 btn">Sort with price</summary>
+          <summary className="m-1 btn btn-success text-white">Sort with price</summary>
           <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-            <li onClick={handleAscending}><a>Low &gt; High</a></li>
-            <li onClick={handleDescending}><a>High &gt; Low</a></li>
+            <li className="font-semibold" onClick={handleAscending}><a>Low &gt; High</a></li>
+            <li className="font-semibold" onClick={handleDescending}><a>High &gt; Low</a></li>
           </ul>
         </details>
       </div>

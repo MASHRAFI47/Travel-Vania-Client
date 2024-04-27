@@ -4,12 +4,17 @@ import DarkLogo from '../../../src/assets/images/darktravelvanialogo.png'
 import { useContext, useState } from "react"
 import { AuthContext } from "../../providers/AuthProvider/AuthProvider"
 
+import 'react-tooltip/dist/react-tooltip.css'
+import { Tooltip } from 'react-tooltip'
+
+
+
 const Header = () => {
     const [theme, setTheme] = useState("light")
     console.log(theme)
 
     const handleThemeChange = (e) => {
-        if(e.target.checked) {
+        if (e.target.checked) {
             setTheme("halloween")
         }
         else {
@@ -32,6 +37,7 @@ const Header = () => {
     </>
     return (
         <div className="navbar bg-base-100 container mx-auto">
+            <Tooltip id="my-tooltip" />
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -57,7 +63,12 @@ const Header = () => {
                 <div className="dropdown dropdown-end">
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">
-                            <img alt="Tailwind CSS Navbar component" src={user ? user.photoURL : "https://extendedevolutionarysynthesis.com/wp-content/uploads/2018/02/avatar-1577909_960_720.png"} />
+                            <img alt="Tailwind CSS Navbar component"
+                                data-tooltip-id="my-tooltip"
+                                data-tooltip-content={`${user?.displayName}`}
+                                data-tooltip-place="left"
+                                src={user ? user.photoURL : "https://extendedevolutionarysynthesis.com/wp-content/uploads/2018/02/avatar-1577909_960_720.png"}
+                            />
                         </div>
                     </div>
                     {

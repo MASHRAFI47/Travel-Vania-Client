@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/effect-fade';
@@ -21,7 +22,7 @@ import Matterhorn from '../../../src/assets/images/the-matterhorn.jpeg'
 
 const Banner = () => {
     return (
-        <div className='relative z-10'>
+        <div className='relative'>
             <Swiper
                 spaceBetween={30}
                 effect={'fade'}
