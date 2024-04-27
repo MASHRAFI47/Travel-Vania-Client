@@ -1,10 +1,11 @@
 import { Link, NavLink } from "react-router-dom"
 import Logo from '../../../src/assets/images/travelvania-logo.png'
+import DarkLogo from '../../../src/assets/images/darktravelvanialogo.png'
 import { useContext, useState } from "react"
 import { AuthContext } from "../../providers/AuthProvider/AuthProvider"
 
 const Header = () => {
-    const [theme, setTheme] = useState("halloween")
+    const [theme, setTheme] = useState("light")
     console.log(theme)
 
     const handleThemeChange = (e) => {
@@ -18,7 +19,7 @@ const Header = () => {
 
     const { user, logOut } = useContext(AuthContext)
     const links = <>
-        <li><NavLink className={'font-semibold'} to={'/'}>Home</NavLink></li>
+        <li><NavLink className={`font-semibold `} to={'/'}>Home</NavLink></li>
         <li><NavLink className={'font-semibold'} to={'/all-tourists-spot'}>All Tourists Spot</NavLink></li>
         <li><NavLink className={'font-semibold'} to={'/add-tourists-spot'}>Add Tourists Spot</NavLink></li>
         <li><NavLink className={'font-semibold'} to={'/my-list'}>My List</NavLink></li>
@@ -40,7 +41,7 @@ const Header = () => {
                         {links}
                     </ul>
                 </div>
-                <Link className="text-3xl font-bold"><img src={Logo} className="w-32" alt="" /></Link>
+                <Link className="text-3xl font-bold"><img src={`${theme == "halloween" ? DarkLogo : Logo}`} className="w-32" alt="" /></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">

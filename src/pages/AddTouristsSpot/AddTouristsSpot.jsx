@@ -136,7 +136,7 @@ const AddTouristSpot = () => {
           </div>
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Add</button>
+          <button className="btn btn-primary border-none bg-[#F2611C]">Add</button>
         </div>
       </form>
     </div>
