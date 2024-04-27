@@ -36,6 +36,20 @@ const Register = () => {
             .then(() => {
                 updateUserProfile(fullName, photoURL)
                     .then(() => {
+                        const user = { email }
+                        fetch(`http://localhost:4000/users`, {
+                            method: "POST",
+                            headers: {
+                                'content-type': 'application/json'
+                            },
+                            body: JSON.stringify(user)
+                        })
+                            .then(res => res.json())
+                            .then(data => {
+                                if (data.insertedId) {
+                                    console.log('user saved in collection')
+                                }
+                            })
                         toast.success("Registration successful. Redirecting...", {
                             autoClose: 2000
                         })

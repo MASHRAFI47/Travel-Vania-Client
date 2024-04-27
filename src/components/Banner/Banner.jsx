@@ -21,7 +21,7 @@ import Matterhorn from '../../../src/assets/images/the-matterhorn.jpeg'
 
 const Banner = () => {
     return (
-        <div className='relative'>
+        <div className='relative z-10'>
             <Swiper
                 spaceBetween={30}
                 effect={'fade'}
@@ -36,7 +36,7 @@ const Banner = () => {
                 modules={[EffectFade, Autoplay, Navigation, Pagination]}
                 className="mySwiper"
             >
-                <div className="max-w-3xl mx-8 md:mx-auto text-center z-[100] left-4 md:left-[5%] lg:left-[22%] top-[23%] md:top-[28%] lg:top-[30%] absolute swiper-texts">
+                <div className="max-w-3xl mx-8 md:mx-auto text-center z-[10] left-4 md:left-[5%] lg:left-[22%] top-[23%] md:top-[28%] lg:top-[30%] absolute swiper-texts">
                     <div className='App'>
                         <h1 className='swiper-heading' style={{ paddingTop: '5rem', margin: 'auto 0', fontWeight: 'normal' }}>
                             <span className='text-3xl md:text-5xl font-bold text-white'>Our tourism provides you to roam around in </span>{' '}

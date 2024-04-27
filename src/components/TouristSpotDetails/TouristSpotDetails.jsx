@@ -4,7 +4,6 @@ const TouristSpotDetails = () => {
     const { id } = useParams();
     const allSpots = useLoaderData();
     const singleSpot = allSpots.find(spot => spot._id == id);
-    console.log(singleSpot)
     return (
         <div className="mx-5 md:mx-auto">
             <div className="container mx-auto mb-10">

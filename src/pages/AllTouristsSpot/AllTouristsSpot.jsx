@@ -2,7 +2,6 @@ import { Link, useLoaderData } from "react-router-dom"
 
 const AllTouristsSpot = () => {
   const allTourists = useLoaderData();
-  console.log(allTourists)
   return (
     <div className="container mx-auto">
       {
