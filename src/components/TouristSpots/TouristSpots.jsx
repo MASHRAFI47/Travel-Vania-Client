@@ -19,7 +19,7 @@ const TouristSpots = ({ touristSpots }) => {
             <h1 className='text-3xl font-bold mb-10 text-center'>Tourist Spots</h1>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
                 {touristSpots.slice(0, showData).map(spot => <div key={spot._id}>
-                    <div className="card w-96 bg-base-100 shadow-xl">
+                    <div className="card bg-base-100 shadow-xl border">
                         <figure><img src={spot?.imageURL} alt="Shoes" /></figure>
                         <div className="card-body">
                             <h2 className="card-title">

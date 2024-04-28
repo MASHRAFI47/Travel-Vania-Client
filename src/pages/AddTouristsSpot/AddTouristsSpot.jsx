@@ -84,7 +84,7 @@ const AddTouristSpot = () => {
           <label className="label font-semibold">
             <span className="label-text">Short Description</span>
           </label>
-          <textarea className="textarea textarea-bordered" placeholder="Bio" {...register("short_description", { required: true })}></textarea>
+          <textarea className="textarea textarea-bordered" placeholder="add texts..." {...register("short_description", { required: true })}></textarea>
           {errors.short_description && <span className="text-red-600">This field is required</span>}
         </div>
 

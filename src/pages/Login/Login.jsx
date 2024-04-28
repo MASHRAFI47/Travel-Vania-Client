@@ -37,10 +37,13 @@ const Login = () => {
                     navigate(location.state ? location.state : "/")
                 }, 3000);
             })
-            .catch(error => console.log(error.message))
+            .catch(error => {
+                console.log(error.message)
+                toast.error("Invalid email or password")
+            })
     }
     return (
-        <div className='grid grid-cols-1 md:grid-cols-2 justify-center items-center mt-10 container mx-auto'>
+        <div className='grid grid-cols-1 md:grid-cols-2 flex-col justify-center items-center mt-10 container mx-auto'>
             <div className="card mx-auto shrink-0 w-full max-w-lg shadow-2xl bg-base-100 border mb-10">
                 <ToastContainer />
                 <form className="card-body" onSubmit={handleSubmit(onSubmit)}>
@@ -68,7 +71,7 @@ const Login = () => {
                         </label>
                     </div>
                     <div className="form-control mt-3">
-                        <button className="btn btn-primary border-none bg-[#F2611C]">Login</button>
+                        <button className="btn btn-success border-none bg-[#F2611C]">Login</button>
                     </div>
                 </form>
                 <div className='form-control'>

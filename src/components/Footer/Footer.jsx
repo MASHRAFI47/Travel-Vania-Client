@@ -1,6 +1,8 @@
 import travelLogo from '../../../src/assets/images/travelvania-logo.png'
 
 const Footer = () => {
+    const date = new Date()
+    const year = date.getFullYear();
     return (
         <footer className="footer footer-center mt-10 p-10 bg-base-200 text-base-content">
             <aside>
@@ -8,7 +10,7 @@ const Footer = () => {
                 <p className="font-bold">
                     Travel Industries Ltd. <br />Providing reliable travel since 2002
                 </p>
-                <p>Copyright © 2024 - All rights reserved</p>
+                <p>Copyright © {year} - All rights reserved</p>
             </aside>
             <nav>
                 <div className="grid grid-flow-col gap-4">
