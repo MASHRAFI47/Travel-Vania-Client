@@ -67,6 +67,7 @@ const Register = () => {
         <div className="card shrink-0 w-full max-w-lg shadow-2xl bg-base-100 border container mx-auto">
             <ToastContainer />
             <form className="card-body" onSubmit={handleSubmit(onSubmit)}>
+                <h1 className="text-3xl font-bold text-center">Register</h1>
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text">Full Name</span>
@@ -104,7 +105,7 @@ const Register = () => {
                     </label>
                 </div>
                 <div className="form-control mt-6">
-                    <button className="btn btn-primary">Register</button>
+                    <button className="btn btn-primary border-none bg-[#F2611C]">Register</button>
                 </div>
             </form>
         </div>
