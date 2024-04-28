@@ -40,7 +40,7 @@ const Banner = () => {
                 <div className="max-w-3xl mx-8 md:mx-auto text-center z-[10] left-4 md:left-[5%] lg:left-[22%] top-[23%] md:top-[28%] lg:top-[30%] absolute swiper-texts">
                     <div className='App'>
                         <h1 className='swiper-heading' style={{ paddingTop: '5rem', margin: 'auto 0', fontWeight: 'normal' }}>
-                            <span className='text-3xl md:text-5xl font-bold text-white'>Our tourism provides you to roam around in </span>{' '}
+                            <span className='text-3xl md:text-5xl font-bold text-white'>Our tourism provides you to roam Europe in </span>{' '}
                             <span style={{ color: '#F2611C', fontWeight: 'bold' }}>
                                 {/* Style will be inherited from the parent element */}
                                 <Typewriter

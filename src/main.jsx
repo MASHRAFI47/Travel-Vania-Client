@@ -17,7 +17,7 @@ import AuthProvider from './providers/AuthProvider/AuthProvider';
 import PrivateRoute from './routes/PrivateRoute/PrivateRoute';
 import TouristSpotDetails from './components/TouristSpotDetails/TouristSpotDetails';
 import UpdateTourists from './pages/UpdateTourists/UpdateTourists';
-import AddCountries from './pages/AddCountries/AddCountries';
+// import AddCountries from './pages/AddCountries/AddCountries';
 import CountrySpots from './components/CountrySpots/CountrySpots';
 
 const router = createBrowserRouter([
@@ -71,10 +71,10 @@ const router = createBrowserRouter([
         element: <CountrySpots />,
         loader: () => fetch('http://localhost:4000/tourists'),
       },
-      {
-        path: "/add-countries",
-        element: <AddCountries />
-      },
+      // {
+      //   path: "/add-countries",
+      //   element: <AddCountries />
+      // },
     ]
   },
 ]);
