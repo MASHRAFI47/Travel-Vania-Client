@@ -39,7 +39,7 @@ const Banner = () => {
             >
                 <div className="max-w-3xl mx-8 md:mx-auto text-center z-[10] left-4 md:left-[5%] lg:left-[22%] top-[23%] md:top-[28%] lg:top-[30%] absolute swiper-texts">
                     <div className='App'>
-                        <h1 className='swiper-heading' style={{ paddingTop: '5rem', margin: 'auto 0', fontWeight: 'normal' }}>
+                        <h1 className='swiper-heading' data-aos="fade-up" data-aos-delay="200" style={{ paddingTop: '5rem', margin: 'auto 0', fontWeight: 'normal' }}>
                             <span className='text-3xl md:text-5xl font-bold text-white'>Our tourism provides you to roam Europe in </span>{' '}
                             <span style={{ color: '#F2611C', fontWeight: 'bold' }}>
                                 {/* Style will be inherited from the parent element */}
@@ -57,28 +57,28 @@ const Banner = () => {
                     </div>
                 </div> 
                 <SwiperSlide>
-                    <div className="hero h-[30rem] md:h-[40rem] w-full relative bg-cover" style={{ backgroundImage: `url(${Rome})` }}>
+                    <div className="hero h-[30rem] md:h-[40rem] w-full relative bg-cover" data-aos="fade-down" style={{ backgroundImage: `url(${Rome})` }}>
                         <div className="hero-overlay bg-opacity-60"></div>
                         <div className="hero-content text-center text-neutral-content">
                         </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="hero h-[30rem] md:h-[40rem] w-full relative bg-cover" style={{ backgroundImage: `url(${Eiffel})` }}>
+                    <div className="hero h-[30rem] md:h-[40rem] w-full relative bg-cover" data-aos="fade-down" style={{ backgroundImage: `url(${Eiffel})` }}>
                         <div className="hero-overlay bg-opacity-60"></div>
                         <div className="hero-content text-center text-neutral-content">
                         </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="hero h-[30rem] md:h-[40rem] w-full relative bg-cover" style={{ backgroundImage: `url(${Alhambra})` }}>
+                    <div className="hero h-[30rem] md:h-[40rem] w-full relative bg-cover" data-aos="fade-down" style={{ backgroundImage: `url(${Alhambra})` }}>
                         <div className="hero-overlay bg-opacity-60"></div>
                         <div className="hero-content text-center text-neutral-content">
                         </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="hero h-[30rem] md:h-[40rem] w-full relative bg-cover" style={{ backgroundImage: `url(${Matterhorn})` }}>
+                    <div className="hero h-[30rem] md:h-[40rem] w-full relative bg-cover" data-aos="fade-down" style={{ backgroundImage: `url(${Matterhorn})` }}>
                         <div className="hero-overlay bg-opacity-60"></div>
                         <div className="hero-content text-center text-neutral-content">
                         </div>

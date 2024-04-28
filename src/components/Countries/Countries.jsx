@@ -26,6 +26,7 @@ const responsive = {
 };
 
 const Countries = () => {
+    let i = 100;
     const [countriesCat, setCountriesCat] = useState([])
 
     useEffect(() => {
@@ -35,7 +36,8 @@ const Countries = () => {
     }, []);
     return (
         <section className="container mx-auto">
-            <h1 className="text-3xl font-bold text-center mb-10">Countries</h1>
+            <h1 className="text-4xl font-bold text-center mb-2" data-aos="zoom-in">Countries</h1>
+            <p className="mb-10 text-xl text-center" data-aos="zoom-in">Discover your next adventure with these Countries</p>
             <Carousel responsive={responsive}
                 additionalTransfrom={0}
                 arrows
@@ -58,7 +60,7 @@ const Countries = () => {
             >
                 {
                     countriesCat.map(country => <Link to={`/country-spots/${country.country_Name}`} key={country._id}>
-                        <div>
+                        <div data-aos="zoom-in" data-aos-delay={i = i + 100}>
                             <div className="card md:mx-10 bg-base-100 shadow-xl image-full">
                                 <figure><img src={country.imageURL} alt={country.country_Name} /></figure>
                                 <div className="card-body">

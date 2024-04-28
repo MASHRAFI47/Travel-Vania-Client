@@ -19,6 +19,7 @@ import TouristSpotDetails from './components/TouristSpotDetails/TouristSpotDetai
 import UpdateTourists from './pages/UpdateTourists/UpdateTourists';
 // import AddCountries from './pages/AddCountries/AddCountries';
 import CountrySpots from './components/CountrySpots/CountrySpots';
+import UpdateProfile from './pages/UpdateProfile/UpdateProfile';
 
 const router = createBrowserRouter([
   {
@@ -65,6 +66,10 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register />
+      },
+      {
+        path: "/update-profile",
+        element: <UpdateProfile />
       },
       {
         path: "/country-spots/:countryName",

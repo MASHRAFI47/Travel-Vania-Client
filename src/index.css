@@ -25,6 +25,16 @@ p {
   background-color: #F2611C;
 }
 
+.swiper-button-prev, .swiper-rtl .swiper-button-next {
+  color: #F2611C !important
+}
+.swiper-button-next, .swiper-rtl .swiper-button-prev {
+  color: #F2611C !important;
+}
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  background-color: #F2611C;
+}
+
 section {
   margin-top: 80px;
 }
