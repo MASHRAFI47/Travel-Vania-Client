@@ -6,13 +6,15 @@ import Countries from "../../components/Countries/Countries"
 
 const Home = () => {
   const touristSpots = useLoaderData()
-  
+
   return (
     <div>
       <Banner />
-      <About />
-      <TouristSpots touristSpots={touristSpots}/>
-      <Countries />
+      <div className="mx-5 md:mx-auto">
+        <About />
+        <TouristSpots touristSpots={touristSpots} />
+        <Countries />
+      </div>
     </div>
   )
 }

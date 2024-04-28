@@ -62,7 +62,10 @@ const Countries = () => {
                             <div className="card md:mx-10 bg-base-100 shadow-xl image-full">
                                 <figure><img src={country.imageURL} alt={country.country_Name} /></figure>
                                 <div className="card-body">
-                                    <h2 className="card-title mx-auto h-full">{country.country_Name}</h2>
+                                    <div className="mx-auto h-full mt-10">
+                                        <h2 className="card-title">{country.country_Name}</h2>
+                                        <p className="mx-auto">{country.short_description}</p>
+                                    </div>
                                     <p>{country.shortDescription}</p>
                                     <div className="card-actions justify-end">
                                     </div>

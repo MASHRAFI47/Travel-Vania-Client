@@ -27,7 +27,7 @@ const TouristSpotDetails = () => {
                     </div>
                 </div>
 
-                <div>
+                <div className="mt-10">
                     <p className="text-xl"> <span className="font-semibold">Description:</span> {singleSpot?.short_description}</p>
                 </div>
             </div>

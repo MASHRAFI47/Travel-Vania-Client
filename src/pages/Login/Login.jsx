@@ -71,7 +71,7 @@ const Login = () => {
                         </label>
                     </div>
                     <div className="form-control mt-3">
-                        <button className="btn btn-success border-none bg-[#F2611C]">Login</button>
+                        <button className="btn btn-success text-white border-none bg-[#F2611C]">Login</button>
                     </div>
                 </form>
                 <div className='form-control'>

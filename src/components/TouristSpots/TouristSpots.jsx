@@ -20,13 +20,13 @@ const TouristSpots = ({ touristSpots }) => {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
                 {touristSpots.slice(0, showData).map(spot => <div key={spot._id}>
                     <div className="card bg-base-100 shadow-xl border">
-                        <figure><img src={spot?.imageURL} alt="Shoes" /></figure>
+                        <figure><img src={spot?.imageURL} className='md:h-[18rem]' alt="Shoes" /></figure>
                         <div className="card-body">
                             <h2 className="card-title">
                                 {spot.tourists_spot_name}
-                                <div className="badge badge-error text-lg text-white">{spot.average_cost} $</div>
+                                <div className="badge badge-error text-lg text-white">{spot.average_cost}$</div>
                             </h2>
-                            <p>{spot.short_description}</p>
+                            <p>{spot.short_description.slice(0, 70).concat("...")}</p>
                             <div className="card-actions justify-end">
                                 <div className="badge badge-outline">{spot.seasonality}</div>
                                 <div className="badge badge-outline">{spot.travel_time}</div>

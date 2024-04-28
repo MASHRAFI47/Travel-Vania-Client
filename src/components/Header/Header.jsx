@@ -47,7 +47,7 @@ const Header = () => {
                         {links}
                     </ul>
                 </div>
-                <Link className="text-3xl font-bold"><img src={`${theme == "halloween" ? DarkLogo : Logo}`} className="w-32" alt="" /></Link>
+                <Link className="text-3xl font-bold"><img src={`${theme == "halloween" ? DarkLogo : Logo}`} className="w-1/2 md:w-32" alt="" /></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -65,7 +65,7 @@ const Header = () => {
                         <div className="w-10 rounded-full">
                             <img alt="Tailwind CSS Navbar component"
                                 data-tooltip-id="my-tooltip"
-                                data-tooltip-content={`${user?.displayName}`}
+                                data-tooltip-content={`${user?.displayName ? user.displayName : ""}`}
                                 data-tooltip-place="left"
                                 src={user ? user.photoURL : "https://extendedevolutionarysynthesis.com/wp-content/uploads/2018/02/avatar-1577909_960_720.png"}
                             />
