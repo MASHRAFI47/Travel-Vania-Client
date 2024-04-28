@@ -10,7 +10,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 import Lottie from "lottie-react";
 import loginLogo from "../../../src/assets/login.json";
-
+import { Helmet } from 'react-helmet-async';
 
 
 
@@ -44,18 +44,21 @@ const Login = () => {
     }
     return (
         <div className='grid grid-cols-1 md:grid-cols-2 flex-col justify-center items-center mt-10 container mx-auto'>
+            <Helmet>
+                <title>Travel Vania | Login</title>
+            </Helmet>
             <div className="card mx-auto shrink-0 w-full max-w-lg shadow-2xl bg-base-100 border mb-10">
                 <ToastContainer />
                 <form className="card-body" onSubmit={handleSubmit(onSubmit)}>
-                    <h1 className='text-3xl font-bold text-center'>Login</h1>
-                    <div className="form-control">
+                    <h1 className='text-3xl font-bold text-center' data-aos="zoom in">Login</h1>
+                    <div className="form-control" data-aos="fade-right" data-aos-delay="100">
                         <label className="label">
                             <span className="label-text">Email</span>
                         </label>
                         <input type="email" placeholder="email" className="input input-bordered" {...register("email", { required: true })} />
                         {errors.email && <span className="text-red-600">This field is required</span>}
                     </div>
-                    <div className="form-control">
+                    <div className="form-control" data-aos="fade-right" data-aos-delay="200">
                         <label className="label">
                             <span className="label-text">Password</span>
                         </label>
@@ -70,7 +73,7 @@ const Login = () => {
                             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                         </label>
                     </div>
-                    <div className="form-control mt-3">
+                    <div className="form-control mt-3" data-aos="fade-right" data-aos-delay="300">
                         <button className="btn btn-success text-white border-none bg-[#F2611C]">Login</button>
                     </div>
                 </form>

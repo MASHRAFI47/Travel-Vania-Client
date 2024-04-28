@@ -20,6 +20,7 @@ import UpdateTourists from './pages/UpdateTourists/UpdateTourists';
 // import AddCountries from './pages/AddCountries/AddCountries';
 import CountrySpots from './components/CountrySpots/CountrySpots';
 import UpdateProfile from './pages/UpdateProfile/UpdateProfile';
+import { HelmetProvider } from 'react-helmet-async';
 
 const router = createBrowserRouter([
   {
@@ -49,7 +50,7 @@ const router = createBrowserRouter([
       {
         path: "/update-tourists/:id",
         element: <PrivateRoute><UpdateTourists /></PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:4000/tourists/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:4000/tourists/${params.id}`)
       },
       {
         path: "/my-list",
@@ -88,7 +89,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AuthProvider>
-      <RouterProvider router={router} />
+      <HelmetProvider>
+        <RouterProvider router={router} />
+      </HelmetProvider>
     </AuthProvider>
   </React.StrictMode>,
 )

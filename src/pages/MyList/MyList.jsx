@@ -6,6 +6,7 @@ import Swal from "sweetalert2"
 import { FaRegTrashCan } from "react-icons/fa6";
 import { FaRegEdit } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -65,7 +66,10 @@ const MyList = () => {
 
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto mt-5" data-aos="zoom-in">
+      <Helmet>
+        <title>Travel Vania | My List</title>
+      </Helmet>
       <div className="overflow-x-auto">
         <table className="table">
           {/* head */}

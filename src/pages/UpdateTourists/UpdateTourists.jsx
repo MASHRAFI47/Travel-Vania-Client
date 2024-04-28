@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
 import { useLoaderData } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
@@ -21,7 +22,7 @@ const UpdateTourists = () => {
         })
             .then(res => res.json())
             .then(data => {
-                if(data.modifiedCount == 0) {
+                if (data.modifiedCount == 0) {
                     toast.warn("Change info to update")
                 }
                 else if (data.modifiedCount > 0) {
@@ -35,6 +36,9 @@ const UpdateTourists = () => {
     }
     return (
         <div className="card shrink-0 w-full max-w-4xl border mx-auto shadow-2xl bg-base-100 mb-10">
+            <Helmet>
+                <title>Travel Vania | Update Tourists Spot</title>
+            </Helmet>
             <ToastContainer />
             <form className="card-body" onSubmit={handleSubmit(onSubmit)}>
                 <h1 className="text-3xl font-bold text-center">Update Tourist Details</h1>

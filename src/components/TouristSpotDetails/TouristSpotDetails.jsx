@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useLoaderData, useParams } from "react-router-dom"
 
 const TouristSpotDetails = () => {
@@ -6,6 +7,9 @@ const TouristSpotDetails = () => {
     const singleSpot = allSpots.find(spot => spot._id == id);
     return (
         <div className="mx-5 md:mx-auto">
+            <Helmet>
+                <title>Travel Vania | Spot Details</title>
+            </Helmet>
             <div className="container mx-auto mb-10">
                 <div className="">
                     <div className="space-y-2 my-5">

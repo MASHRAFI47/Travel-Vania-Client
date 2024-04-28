@@ -2,6 +2,7 @@ import { useContext } from "react"
 import { useForm } from "react-hook-form"
 import { AuthContext } from "../../providers/AuthProvider/AuthProvider"
 import Swal from "sweetalert2"
+import { Helmet } from "react-helmet-async"
 
 const AddTouristSpot = () => {
   const { user } = useContext(AuthContext)
@@ -37,16 +38,19 @@ const AddTouristSpot = () => {
 
   return (
     <div className="card shrink-0 w-full max-w-4xl border mx-auto shadow-2xl bg-base-100 mb-10">
+      <Helmet>
+        <title>Travel Vania | Add Tourist Spot</title>
+      </Helmet>
       <form className="card-body" onSubmit={handleSubmit(onSubmit)}>
-        <h1 className="text-3xl font-bold text-center">Add Tourist Spot</h1>
-        <div className="form-control">
+        <h1 className="text-3xl font-bold text-center" data-aos="zoom-in">Add Tourist Spot</h1>
+        <div className="form-control" data-aos="fade-right">
           <label className="label">
             <span className="label-text font-semibold">Image Url</span>
           </label>
           <input type="text" placeholder="http://bufferimage1421" className="input input-bordered" {...register("imageURL", { required: true })} />
           {errors.imageURL && <span className="text-red-600">This field is required</span>}
         </div>
-        <div className="grid grid-cols-2 gap-5">
+        <div className="grid grid-cols-2 gap-5" data-aos="fade-right" data-aos-delay="100">
 
           <div className="form-control">
             <label className="label font-semibold">
@@ -72,7 +76,7 @@ const AddTouristSpot = () => {
           </div>
 
         </div>
-        <div className="form-control">
+        <div className="form-control" data-aos="fade-right" data-aos-delay="200">
           <label className="label font-semibold">
             <span className="label-text">Location</span>
           </label>
@@ -80,7 +84,7 @@ const AddTouristSpot = () => {
           {errors.location && <span className="text-red-600">This field is required</span>}
         </div>
 
-        <div className="form-control">
+        <div className="form-control" data-aos="fade-right" data-aos-delay="300">
           <label className="label font-semibold">
             <span className="label-text">Short Description</span>
           </label>
@@ -88,7 +92,7 @@ const AddTouristSpot = () => {
           {errors.short_description && <span className="text-red-600">This field is required</span>}
         </div>
 
-        <div className="grid grid-cols-3 gap-5">
+        <div className="grid grid-cols-3 gap-5" data-aos="fade-right" data-aos-delay="400">
           <div className="form-control">
             <label className="label font-semibold">
               <span className="label-text">Average Cost</span>
@@ -111,7 +115,7 @@ const AddTouristSpot = () => {
             {errors.travel_time && <span className="text-red-600">This field is required</span>}
           </div>
         </div>
-        <div className="form-control">
+        <div className="form-control" data-aos="fade-right" data-aos-delay="500">
           <label className="label font-semibold">
             <span className="label-text">Total Visitors Per Year</span>
           </label>
@@ -119,7 +123,7 @@ const AddTouristSpot = () => {
           {errors.totalVisitorsPerYear && <span className="text-red-600">This field is required</span>}
         </div>
 
-        <div className="grid grid-cols-2 gap-5">
+        <div className="grid grid-cols-2 gap-5" data-aos="fade-right" data-aos-delay="600">
           <div className="form-control">
             <label className="label font-semibold">
               <span className="label-text">User email</span>
@@ -135,7 +139,7 @@ const AddTouristSpot = () => {
             {errors.user_name && <span className="text-red-600">This field is required</span>}
           </div>
         </div>
-        <div className="form-control mt-6">
+        <div className="form-control mt-6" data-aos="fade-right" data-aos-delay="700">
           <button className="btn btn-success text-white border-none bg-[#F2611C]">Add</button>
         </div>
       </form>

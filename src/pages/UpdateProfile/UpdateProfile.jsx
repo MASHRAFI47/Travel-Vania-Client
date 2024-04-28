@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 // import { FaEye, FaEyeSlash } from "react-icons/fa6";
 import { AuthContext } from "../../providers/AuthProvider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
+import { Helmet } from "react-helmet-async";
 
 const UpdateProfile = () => {
     const { user, updateUserProfile } = useContext(AuthContext)
@@ -25,6 +26,9 @@ const UpdateProfile = () => {
     }
     return (
         <div className="card shrink-0 w-full max-w-lg shadow-2xl bg-base-100 mx-auto border mb-20 mt-10">
+            <Helmet>
+                <title>Travel Vania | Update Profile</title>
+            </Helmet>
             <ToastContainer />
             <form className="card-body" onSubmit={handleSubmit(onSubmit)}>
                 <h1 className="text-3xl text-center font-bold" data-aos="fade-down">Update Profile</h1>

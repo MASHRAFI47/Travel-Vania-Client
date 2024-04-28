@@ -5,6 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
     const [showPass, setShowPass] = useState(false)
@@ -65,31 +66,34 @@ const Register = () => {
     }
     return (
         <div className="card shrink-0 w-full max-w-lg shadow-2xl bg-base-100 border container mx-auto">
+            <Helmet>
+                <title>Travel Vania | Register</title>
+            </Helmet>
             <ToastContainer />
             <form className="card-body" onSubmit={handleSubmit(onSubmit)}>
-                <h1 className="text-3xl font-bold text-center">Register</h1>
-                <div className="form-control">
+                <h1 className="text-3xl font-bold text-center" data-aos="zoom-in">Register</h1>
+                <div className="form-control" data-aos="fade-right" data-aos-delay="100">
                     <label className="label">
                         <span className="label-text">Full Name</span>
                     </label>
                     <input type="text" placeholder="full name" className="input input-bordered" {...register("fullName", { required: true })} />
                     {errors.fullName && <span className="text-red-600">This field is required</span>}
                 </div>
-                <div className="form-control">
+                <div className="form-control" data-aos="fade-right" data-aos-delay="200">
                     <label className="label">
                         <span className="label-text">Photo Url</span>
                     </label>
                     <input type="text" placeholder="photo url" className="input input-bordered" {...register("photoURL", { required: true })} />
                     {errors.photoURL && <span className="text-red-600">This field is required</span>}
                 </div>
-                <div className="form-control">
+                <div className="form-control" data-aos="fade-right" data-aos-delay="300">
                     <label className="label">
                         <span className="label-text">Email</span>
                     </label>
                     <input type="email" placeholder="email" className="input input-bordered" {...register("email", { required: true })} />
                     {errors.email && <span className="text-red-600">This field is required</span>}
                 </div>
-                <div className="form-control">
+                <div className="form-control" data-aos="fade-right" data-aos-delay="400">
                     <label className="label">
                         <span className="label-text">Password</span>
                     </label>
