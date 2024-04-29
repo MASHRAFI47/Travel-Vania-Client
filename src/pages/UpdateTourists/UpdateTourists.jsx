@@ -13,7 +13,7 @@ const UpdateTourists = () => {
     } = useForm()
 
     const onSubmit = (data) => {
-        fetch(`http://localhost:4000/tourists/${updateInfo._id}`, {
+        fetch(`https://travel-vania-server.vercel.app/tourists/${updateInfo._id}`, {
             method: "PUT",
             headers: {
                 'content-type': 'application/json'

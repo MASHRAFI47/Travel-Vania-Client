@@ -9,7 +9,7 @@ const AddCountries = () => {
     } = useForm()
 
     const onSubmit = (data) => {
-        fetch('http://localhost:4000/countries', {
+        fetch('https://travel-vania-server.vercel.app/countries', {
             method: "POST",
             headers: {
                 'content-type':'application/json'

@@ -31,12 +31,12 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () => fetch('http://localhost:4000/tourists')
+        loader: () => fetch('https://travel-vania-server.vercel.app/tourists')
       },
       {
         path: "/all-tourists-spot",
-        element: <PrivateRoute><AllTouristsSpot /></PrivateRoute>,
-        loader: () => fetch('http://localhost:4000/tourists')
+        element: <AllTouristsSpot />,
+        loader: () => fetch('https://travel-vania-server.vercel.app/tourists')
       },
       {
         path: "/add-tourists-spot",
@@ -45,12 +45,12 @@ const router = createBrowserRouter([
       {
         path: "/tourist-spot-details/:id",
         element: <PrivateRoute><TouristSpotDetails /></PrivateRoute>,
-        loader: () => fetch('http://localhost:4000/tourists')
+        loader: () => fetch('https://travel-vania-server.vercel.app/tourists')
       },
       {
         path: "/update-tourists/:id",
         element: <PrivateRoute><UpdateTourists /></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:4000/tourists/${params.id}`)
+        loader: ({ params }) => fetch(`https://travel-vania-server.vercel.app/tourists/${params.id}`)
       },
       {
         path: "/my-list",
@@ -75,7 +75,7 @@ const router = createBrowserRouter([
       {
         path: "/country-spots/:countryName",
         element: <CountrySpots />,
-        loader: () => fetch('http://localhost:4000/tourists'),
+        loader: () => fetch('https://travel-vania-server.vercel.app/tourists'),
       },
       // {
       //   path: "/add-countries",

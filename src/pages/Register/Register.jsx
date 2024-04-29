@@ -38,7 +38,7 @@ const Register = () => {
                 updateUserProfile(fullName, photoURL)
                     .then(() => {
                         const user = { email }
-                        fetch(`http://localhost:4000/users`, {
+                        fetch(`https://travel-vania-server.vercel.app/users`, {
                             method: "POST",
                             headers: {
                                 'content-type': 'application/json'

@@ -16,7 +16,7 @@ const MyList = () => {
   const [items, setItems] = useState([])
 
   useEffect(() => {
-    fetch(`http://localhost:4000/myProduct/${user?.email}`)
+    fetch(`https://travel-vania-server.vercel.app/myProduct/${user?.email}`)
       .then(res => res.json())
       .then(data => {
         setItems(data)
@@ -44,7 +44,7 @@ const MyList = () => {
           icon: "success"
         });
 
-        fetch(`http://localhost:4000/tourists/${id}`, {
+        fetch(`https://travel-vania-server.vercel.app/tourists/${id}`, {
           method: "DELETE"
         })
           .then(res => res.json())

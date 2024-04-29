@@ -18,7 +18,7 @@ const AddTouristSpot = () => {
     const email = user.email
     const newSpot = { email, imageURL, tourists_spot_name, country_Name, short_description, location, average_cost, seasonality, travel_time, totalVisitorsPerYear, user_email, user_name }
 
-    fetch('http://localhost:4000/tourists', {
+    fetch('https://travel-vania-server.vercel.app/tourists', {
       method: "POST",
       headers: {
         "content-type": "application/json"
@@ -61,7 +61,7 @@ const AddTouristSpot = () => {
           </div>
           <div className="form-control">
             <label className="label font-semibold">
-              <span className="label-text">Select country</span>
+              <span className="label-text">Country Name</span>
             </label>
             <select className="select select-bordered w-full" {...register("country_Name", { required: true })}>
               <option disabled selected>Select Country</option>
@@ -126,14 +126,14 @@ const AddTouristSpot = () => {
         <div className="grid grid-cols-2 gap-5" data-aos="fade-right" data-aos-delay="600">
           <div className="form-control">
             <label className="label font-semibold">
-              <span className="label-text">User email</span>
+              <span className="label-text">User Email</span>
             </label>
             <input type="text" placeholder="Ralph Lauren" className="input input-bordered" defaultValue={user ? user.email : ""} readOnly {...register("user_email", { required: true })} />
             {errors.user_email && <span className="text-red-600">This field is required</span>}
           </div>
           <div className="form-control">
             <label className="label font-semibold">
-              <span className="label-text">User email</span>
+              <span className="label-text">User Name</span>
             </label>
             <input type="text" placeholder="ralph@gmail.com" className="input input-bordered" defaultValue={user ? user.displayName : ""} {...register("user_name", { required: true })} readOnly />
             {errors.user_name && <span className="text-red-600">This field is required</span>}

@@ -39,7 +39,7 @@ const AllTouristsSpot = () => {
             <img src={tourist?.imageURL} className="w-full md:w-[35%] lg:h-[25%] rounded-xl" alt="Movie" />
             <div className="card-body">
               <h2 className="card-title text-xl">Tourist Spot: {tourist.tourists_spot_name}</h2>
-              <h2 className="font-semibold text-xl text-red-600">Price: {tourist.average_cost}$</h2>
+              <h2 className="font-semibold text-xl text-red-600">Average Cost: {tourist.average_cost}$</h2>
               <h3 className="font-bold text-xl">Travel Time: {tourist.travel_time}</h3>
               <h3 className="font-bold text-xl">Seasonality: {tourist.seasonality}</h3>
               <div className="card-actions justify-end">

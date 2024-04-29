@@ -30,7 +30,7 @@ const Countries = () => {
     const [countriesCat, setCountriesCat] = useState([])
 
     useEffect(() => {
-        fetch("http://localhost:4000/countries")
+        fetch("https://travel-vania-server.vercel.app/countries")
             .then(res => res.json())
             .then(data => setCountriesCat(data))
     }, []);
