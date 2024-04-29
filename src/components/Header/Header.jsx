@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom"
 import Logo from '../../../src/assets/images/travelvania-logo.png'
-import DarkLogo from '../../../src/assets/images/darktravelvanialogo.png'
+// import DarkLogo from '../../../src/assets/images/darktravelvanialogo.png'
 import { useContext, useState } from "react"
 import { AuthContext } from "../../providers/AuthProvider/AuthProvider"
 
@@ -10,14 +10,14 @@ import { Tooltip } from 'react-tooltip'
 
 
 const Header = () => {
-    const [theme, setTheme] = useState("light")
+    const [theme, setTheme] = useState("lemonade")
 
     const handleThemeChange = (e) => {
         if (e.target.checked) {
-            setTheme("halloween")
+            setTheme("synthwave")
         }
         else {
-            setTheme("light")
+            setTheme("lemonade")
         }
     }
 
@@ -46,7 +46,7 @@ const Header = () => {
                         {links}
                     </ul>
                 </div>
-                <Link className="text-3xl font-bold"><img src={`${theme == "halloween" ? DarkLogo : Logo}`} className="w-1/2 md:w-32" alt="" /></Link>
+                <Link className="text-3xl font-bold"><img src={`${theme == "synthwave" ? Logo : Logo}`} className="w-1/2 md:w-32" alt="" /></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">

@@ -24,7 +24,7 @@ const AllTouristsSpot = () => {
       </Helmet>
       <div className="flex justify-center md:justify-end mt-3">
         <details className="dropdown">
-          <summary className="m-1 btn btn-success text-white" data-aos="fade-in">Sort with price</summary>
+          <summary className="m-1 btn bg-green-500 hover:bg-green-600 text-white" data-aos="fade-in">Sort with price</summary>
           <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
             <li className="font-semibold" onClick={handleAscending}><a>Low &gt; High</a></li>
             <li className="font-semibold" onClick={handleDescending}><a>High &gt; Low</a></li>
@@ -43,7 +43,7 @@ const AllTouristsSpot = () => {
               <h3 className="font-bold text-xl">Seasonality: {tourist.seasonality}</h3>
               <div className="card-actions justify-end">
                 <Link to={`/tourist-spot-details/${tourist._id}`}>
-                  <button className="btn btn-primary border-none bg-[#F2611C]">View Details</button>
+                  <button className="btn btn-primary border-none text-white bg-[#F2611C]">View Details</button>
                 </Link>
               </div>
             </div>
