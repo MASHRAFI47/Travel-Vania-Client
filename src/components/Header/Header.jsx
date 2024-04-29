@@ -11,7 +11,6 @@ import { Tooltip } from 'react-tooltip'
 
 const Header = () => {
     const [theme, setTheme] = useState("light")
-    console.log(theme)
 
     const handleThemeChange = (e) => {
         if (e.target.checked) {

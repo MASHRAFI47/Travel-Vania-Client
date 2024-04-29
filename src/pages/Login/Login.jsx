@@ -6,7 +6,7 @@ import { AuthContext } from '../../providers/AuthProvider/AuthProvider';
 //react icons
 import { FaEyeSlash, FaEye } from "react-icons/fa6";
 import SocialMediaLogin from '../../components/SocialMediaLogin/SocialMediaLogin';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 import Lottie from "lottie-react";
 import loginLogo from "../../../src/assets/login.json";
@@ -80,6 +80,9 @@ const Login = () => {
                 <div className='form-control'>
                     <p className="text-center text-sm mb-2">-Or Sign In Using-</p>
                     <SocialMediaLogin />
+                </div>
+                <div>
+                    <p className='text-center text-sm mb-5 font-semibold'>New User? <Link className='hover:text-orange-600 underline' to={'/register'}>Register Now</Link></p>
                 </div>
             </div>
             <div className='flex justify-center'>

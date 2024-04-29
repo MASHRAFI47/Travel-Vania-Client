@@ -5,7 +5,6 @@ import { Link, useLoaderData } from "react-router-dom"
 const AllTouristsSpot = () => {
   const allTourists = useLoaderData();
   const [sortTour, setSortTour] = useState(allTourists)
-  console.log(sortTour)
 
   const handleAscending = () => {
     const sortingTour = [...allTourists].sort((a, b) => parseInt(a.average_cost) > parseInt(b.average_cost) ? 1 : -1);

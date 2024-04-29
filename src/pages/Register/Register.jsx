@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form"
 import { AuthContext } from "../../providers/AuthProvider/AuthProvider"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
 import { Helmet } from "react-helmet-async";
 
@@ -110,6 +110,9 @@ const Register = () => {
                 </div>
                 <div className="form-control mt-6">
                     <button className="btn btn-success text-white border-none bg-[#F2611C]">Register</button>
+                </div>
+                <div>
+                    <p className='text-center text-sm mb-5 font-semibold'>Already a user? <Link className='hover:text-orange-600 underline' to={'/login'}>Login Now</Link></p>
                 </div>
             </form>
         </div>

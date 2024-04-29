@@ -14,7 +14,6 @@ const TouristSpots = ({ touristSpots }) => {
         setShowData(6)
     }
 
-    console.log(touristSpots)
     return (
         <section className='container mx-auto '>
             <h1 className='text-4xl font-bold mb-2 text-center' data-aos="zoom-in">Tourist Spots</h1>
